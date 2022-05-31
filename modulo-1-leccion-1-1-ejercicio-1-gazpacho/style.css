@@ -1,0 +1,26 @@
+*{background-color: #f3f4f5;}
+
+h1{
+    font-family: arial;
+    font-size: 24px;
+    color: black;
+}
+
+p{
+    font-family: georgia;
+    font-size: 18px;
+    color: #757575;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+td,
+th {
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+}
