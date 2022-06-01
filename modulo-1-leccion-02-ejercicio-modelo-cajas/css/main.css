@@ -1,0 +1,33 @@
+.block{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.inline{
+    width: 100px;
+    height: 100px;
+    display: inline;
+}
+
+.inline-block{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.none{
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+
+.container img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
