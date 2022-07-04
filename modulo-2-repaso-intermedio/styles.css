@@ -1,0 +1,45 @@
+
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.yellow {
+    background-color: #ffcc00;
+}
+
+.orange {
+    background-color: #ff9900;
+}
+
+.face {
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+.form {
+    margin-top: 100px;
+}
+
+.selector {
+    height: 25px;
+}
+
+.button {
+    height: 25px;
+    width: 80px;
+    color: white;
+    font-weight: bolder;
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
