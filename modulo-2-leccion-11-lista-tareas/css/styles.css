@@ -1,0 +1,14 @@
+.title {
+    margin: 20px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.list {
+    margin-left: 10px;
+}
+
+.taskCompleted {
+    text-decoration: line-through;
+}
