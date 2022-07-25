@@ -3,13 +3,17 @@
 const tasksUlElement = document.querySelector('.js_taskList');
 
 const tasks = [
-    { name: "Recoger setas en el campo", 
+    { id:654564,
+      name: "Recoger setas en el campo", 
       completed: true },
-    { name: "Comprar pilas", 
+    { id:12574,
+      name: "Comprar pilas", 
       completed: true },
-    { name: "Poner una lavadora de blancos", 
+    { id:478244,
+      name: "Poner una lavadora de blancos", 
       completed: true },
     {
+      id:2547554,
       name: "Aprender cómo se realizan las peticiones al servidor en JavaScript",
       completed: false,
     },
@@ -23,10 +27,10 @@ function renderEachTask(taskData) { //datos de cada tarea como parámetro, pinta
     let html = '';
 
     if ( taskData.completed === true) {
-      html = `<li class="taskCompleted"> <input type="checkbox" name="" id="" checked/>`
+      html = `<li class="js_task taskCompleted" id=${taskData.id}> <input type="checkbox" name="" id="" checked/>`
     }
     else  {
-        html = `<li> <input type="checkbox" name="" id=""/>`;
+        html = `<li class="js_task" id=${taskData.id}> <input type="checkbox" name="" id=""/>`;
     }
 
     html += `${taskData.name} </li>`;
@@ -48,8 +52,33 @@ function renderAllTasks() {
  };
 }
 
+function handleClickTask(event) {
+ 
+  const clickedTaskId = parseInt(event.currentTarget.id);
+
+  const taskFound = tasks.find ((task) => task.id === clickedTaskId);
+
+  if(taskFound.completed === true) {
+    taskFound.completed === false
+  } else {
+    taskFound.completed === true
+  }
+
+  renderAllTasks();
+
+}
+
+
 renderAllTasks();
 
 //quizá se pueda jugar con el índice para poner el listener en el ul y que el target te diga en qué posición del array se produce el evento de manera que entonces te ponga o quite la clase en esa posición en concreto.
+
+
+
+const allLi = document.querySelectorAll('.js_task'); //nos devuelve un array, tenemos que poner el evento a cada li
+
+for (const eachLi of allLi) {
+ eachLi.addEventListener('click',handleClickTask);
+}
 
 
